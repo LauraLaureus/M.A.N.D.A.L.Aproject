@@ -124,6 +124,11 @@
     <None Include="freeglut.dll" />
     <None Include="glew32.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioHeader.h" />
+    <ClInclude Include="GraphicsHeader.h" />
+    <ClInclude Include="SystemHeader.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

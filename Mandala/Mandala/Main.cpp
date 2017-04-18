@@ -1,10 +1,7 @@
 //Jeff Chastine
-#include <Windows.h>
-#include <GL\glew.h>
-#include <GL\freeglut.h>
-#include <iostream>
-#include <al.h>
-#include <alc.h>
+#include "SystemHeader.h"
+#include "AudioHeader.h"
+#include "GraphicsHeader.h"
 
 using namespace std;
 
