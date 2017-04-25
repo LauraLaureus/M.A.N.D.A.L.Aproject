@@ -18,6 +18,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="AudioMaster.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut.dll" />
@@ -31,6 +34,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="SystemHeader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadingHeader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioMaster.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

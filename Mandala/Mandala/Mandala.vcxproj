@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AudioMaster.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -126,8 +127,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AudioHeader.h" />
+    <ClInclude Include="AudioMaster.h" />
     <ClInclude Include="GraphicsHeader.h" />
     <ClInclude Include="SystemHeader.h" />
+    <ClInclude Include="ThreadingHeader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
