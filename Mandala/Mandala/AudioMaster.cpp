@@ -5,6 +5,14 @@ std::list<ALuint>* AudioMaster::buffers;
 ALCcontext* AudioMaster::audioContext;
 ALCdevice* AudioMaster::audioDevice;
 
+
+const int SRATE = 44100;
+const int SSIZE = 1024;
+
+ALbyte buffer[22050];
+ALint sample;
+
+
 void AudioMaster::initAudio() {
 	AudioMaster::audioDevice = alcOpenDevice(NULL);
 	if (!AudioMaster::audioDevice) {
@@ -25,12 +33,35 @@ void AudioMaster::deinitAudio() {
 	delete AudioMaster::audioDevice;
 }
 
-int AudioMaster::loadSoundFile(std::string fileName) {
-	ALuint bufferDescriptor;
-	alGenBuffers((ALuint)1,&bufferDescriptor);
-	AudioMaster::buffers->push_back(bufferDescriptor);
 
-	//TODO load wavFile
+//TODO: modify to accept volumen and loop
+void AudioMaster::playSoundFile(std::string fileName,float volume,bool loop) {
 
-	return 0;
+
+	PlaySound(TEXT(fileName.c_str()), NULL, SND_ASYNC);
+}
+
+void AudioMaster::recordInit() {
+	AudioMaster::audioDevice = alcCaptureOpenDevice(NULL, SRATE, AL_FORMAT_STEREO16, SSIZE);
+	if (alGetError() != AL_NO_ERROR) {
+		return;
+	}
+	alcCaptureStart(AudioMaster::audioDevice);
+
+}
+
+void AudioMaster::recordFunction() {
+
+	while (true) {
+		alcGetIntegerv(AudioMaster::audioDevice, ALC_CAPTURE_SAMPLES, (ALCsizei)sizeof(ALint), &sample);
+		alcCaptureSamples(AudioMaster::audioDevice, (ALCvoid *)buffer, sample);
+
+		// ... do something with the buffer 
+	}
+
+}
+
+void AudioMaster::recordStop() {
+	alcCaptureStop(AudioMaster::audioDevice);
+	alcCaptureCloseDevice(AudioMaster::audioDevice);
 }

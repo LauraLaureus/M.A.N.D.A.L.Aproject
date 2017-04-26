@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Program Files %28x86%29\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\include\eyex-cpp;C:\Program Files %28x86%29\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -80,8 +80,8 @@
       <AdditionalIncludeDirectories>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\glew-1.11.0\include;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\glew-1.11.0\lib;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freeglut.lib;glew32.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\lib\x86;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\glew-1.11.0\lib;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;glew32.lib;Tobii.EyeX.Client.lib;OpenAL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

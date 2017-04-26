@@ -1,24 +1,11 @@
 ﻿  AudioMaster.cpp
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(19): error C2440: '=': no se puede realizar la conversión de 'std::list<int,std::allocator<_Ty>> *' a 'std::list<ALuint,std::allocator<_Ty>> *'
-          with
-          [
-              _Ty=int
-          ]
-          and
-          [
-              _Ty=ALuint
-          ]
-  c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(19): note: Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(24): warning C4150: eliminación de puntero a tipo 'ALCcontext_struct' incompleto; no se ha llamado a un destructor
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(32): warning C4150: eliminación de puntero a tipo 'ALCcontext_struct' incompleto; no se ha llamado a un destructor
   c:\program files (x86)\openal 1.1 sdk\include\alc.h(45): note: vea la declaración de 'ALCcontext_struct'
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(25): warning C4150: eliminación de puntero a tipo 'ALCdevice_struct' incompleto; no se ha llamado a un destructor
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(33): warning C4150: eliminación de puntero a tipo 'ALCdevice_struct' incompleto; no se ha llamado a un destructor
   c:\program files (x86)\openal 1.1 sdk\include\alc.h(44): note: vea la declaración de 'ALCdevice_struct'
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(31): error C2661: 'std::list<ALuint,std::allocator<_Ty>>::insert': ninguna función sobrecargada acepta 1 argumentos
-          with
-          [
-              _Ty=ALuint
-          ]
   Generando código...
   Compilando...
   Main.cpp
   Generando código...
+  Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.exe
+  Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.pdb (Partial PDB)
