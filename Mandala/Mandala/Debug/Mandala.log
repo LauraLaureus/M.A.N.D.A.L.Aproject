@@ -1,11 +1,3 @@
-﻿  AudioMaster.cpp
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(32): warning C4150: eliminación de puntero a tipo 'ALCcontext_struct' incompleto; no se ha llamado a un destructor
-  c:\program files (x86)\openal 1.1 sdk\include\alc.h(45): note: vea la declaración de 'ALCcontext_struct'
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiomaster.cpp(33): warning C4150: eliminación de puntero a tipo 'ALCdevice_struct' incompleto; no se ha llamado a un destructor
-  c:\program files (x86)\openal 1.1 sdk\include\alc.h(44): note: vea la declaración de 'ALCdevice_struct'
-  Generando código...
-  Compilando...
-  Main.cpp
-  Generando código...
+﻿  Main.cpp
   Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.exe
   Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.pdb (Partial PDB)

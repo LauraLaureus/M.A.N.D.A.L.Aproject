@@ -3,6 +3,8 @@
 #include "GraphicsHeader.h"
 #include "ThreadingHeader.h"
 
+#include <SFML/Audio.hpp>
+
 
 
 using namespace std;
@@ -50,9 +52,20 @@ int main(int argc, char* argv[]) {
 
 
 int main(int argc, char *argv[]) {
-	AudioMaster::playSoundFile("testAudio.wav");
+	/*AudioMaster::playSoundFile("testAudio.wav");
 	system("pause");
-	AudioMaster::playSoundFile("testAudio.wav");
+	AudioMaster::playSoundFile("testAudio.wav");*/
+
+	sf::SoundBuffer buffer;
+
+	if (!buffer.loadFromFile("testAudio.wav")) {
+		return 1;
+	}
+	
+	sf::Sound sound;
+	sound.setBuffer(buffer);
+	sound.play(); // serxiiiii
+
 	
 	system("pause");
 	return 0;
