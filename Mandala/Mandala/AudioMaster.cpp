@@ -1,46 +1,8 @@
-#include "AudioHeader.h"
-
-
-std::list<ALuint>* AudioMaster::buffers;
-ALCcontext* AudioMaster::audioContext;
-ALCdevice* AudioMaster::audioDevice;
-
-
-const int SRATE = 44100;
-const int SSIZE = 1024;
-
-ALbyte buffer[22050];
-ALint sample;
-
-
-void AudioMaster::initAudio() {
-	AudioMaster::audioDevice = alcOpenDevice(NULL);
-	if (!AudioMaster::audioDevice) {
-		//TODO mandar una excepción
-	}
-
-	AudioMaster::audioContext = alcCreateContext(audioDevice,NULL);
-	if (!alcMakeContextCurrent(AudioMaster::audioContext)) {
-		//TODO mandar una excepción
-	}
-
-	AudioMaster::buffers = new std::list<ALuint>();
-}
-
-void AudioMaster::deinitAudio() {
-	delete AudioMaster::buffers;
-	delete AudioMaster::audioContext;
-	delete AudioMaster::audioDevice;
-}
+#include "AudioMaster.h"
 
 
 //TODO: modify to accept volumen and loop
-void AudioMaster::playSoundFile(std::string fileName,float volume,bool loop) {
-
-	sf::SoundBuffer buffer;
-	
-	if (!buffer.loadFromFile(fileName))
-		return;
+void AudioMaster::playSoundFile(sf::SoundBuffer buffer,float volume,bool loop) {
 
 	sf::Sound sound;
 	sound.setBuffer(buffer);
@@ -48,30 +10,26 @@ void AudioMaster::playSoundFile(std::string fileName,float volume,bool loop) {
 	sound.setLoop(loop);
 	sound.play();
 
-	//DEPRECATEDPlaySound(TEXT(fileName.c_str()), NULL, SND_ASYNC);
 }
 
-void AudioMaster::recordInit() {
-	AudioMaster::audioDevice = alcCaptureOpenDevice(NULL, SRATE, AL_FORMAT_STEREO16, SSIZE);
-	if (alGetError() != AL_NO_ERROR) {
-		return;
-	}
-	alcCaptureStart(AudioMaster::audioDevice);
-
+sf::SoundBuffer AudioMaster::loadFile(std::string fileName) {
+	sf::SoundBuffer buffer;
+	buffer.loadFromFile(fileName);
+	return buffer;
 }
 
-void AudioMaster::recordFunction() {
 
-	while (true) {
-		alcGetIntegerv(AudioMaster::audioDevice, ALC_CAPTURE_SAMPLES, (ALCsizei)sizeof(ALint), &sample);
-		alcCaptureSamples(AudioMaster::audioDevice, (ALCvoid *)buffer, sample);
+std::string AudioMaster::getAbsoluteFileName(std::string fileName) {
 
-		// ... do something with the buffer 
+
+	char* nameBuffer = new char[1024];
+	if (GetModuleFileName(NULL, nameBuffer, 1024)) {
+
 	}
 
-}
+	std::string absolutePath(nameBuffer);
+	int pointer = absolutePath.rfind("\\");
+	absolutePath = absolutePath.substr(0, pointer + 1);
+	return absolutePath + fileName;
 
-void AudioMaster::recordStop() {
-	alcCaptureStop(AudioMaster::audioDevice);
-	alcCaptureCloseDevice(AudioMaster::audioDevice);
 }
