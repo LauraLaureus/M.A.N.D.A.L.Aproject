@@ -58,7 +58,19 @@ int main(int argc, char *argv[]) {
 
 	sf::SoundBuffer buffer;
 
-	if (!buffer.loadFromFile("testAudio.wav")) {
+	char* nameBuffer = new char[1024];
+	if (GetModuleFileName(NULL, nameBuffer, 1024)) {
+		
+	}
+	
+	string absolutePath(nameBuffer);
+	int pointer = absolutePath.rfind("\\");
+	absolutePath = absolutePath.substr(0, pointer + 1);
+	printf("%s", absolutePath.c_str());
+
+
+	if (!buffer.loadFromFile(absolutePath + "testAudio.wav")) {
+		system("pause");
 		return 1;
 	}
 	
