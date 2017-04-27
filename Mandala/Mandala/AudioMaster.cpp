@@ -37,8 +37,18 @@ void AudioMaster::deinitAudio() {
 //TODO: modify to accept volumen and loop
 void AudioMaster::playSoundFile(std::string fileName,float volume,bool loop) {
 
+	sf::SoundBuffer buffer;
+	
+	if (!buffer.loadFromFile(fileName))
+		return;
 
-	PlaySound(TEXT(fileName.c_str()), NULL, SND_ASYNC);
+	sf::Sound sound;
+	sound.setBuffer(buffer);
+	sound.setVolume(volume);
+	sound.setLoop(loop);
+	sound.play();
+
+	//DEPRECATEDPlaySound(TEXT(fileName.c_str()), NULL, SND_ASYNC);
 }
 
 void AudioMaster::recordInit() {
