@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="AudioMaster.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SpeechRecognitionPermissions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut.dll" />
@@ -129,8 +130,15 @@
     <ClInclude Include="AudioHeader.h" />
     <ClInclude Include="AudioMaster.h" />
     <ClInclude Include="GraphicsHeader.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SpeechRecognitionHeader.h" />
+    <ClInclude Include="SpeechRecognitionPermissions.h" />
     <ClInclude Include="SystemHeader.h" />
     <ClInclude Include="ThreadingHeader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Mandala.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
