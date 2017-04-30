@@ -1,3 +1,7 @@
-﻿cl : Línea de comandos warning D9028: error de recompilación mínimo, revirtiendo a la compilación normal
-  AudioCapturePErmissions.cpp
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\audiocapturepermissions.cpp : fatal error C1041: no puede abrir la base de datos de programa 'C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Mandala\Debug\vc140.pdb'. Si varios CL.EXE escriben en el mismo archivo .PDB, use /FS.
+﻿  GameEntity.cpp
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\gameentity.cpp(6): error C2600: 'GameEntity::GameEntity': no se puede definir una función miembro especial generada por el compilador (se debe declarar primero en la clase)
+  GameComponent.cpp
+  Generando código...
+  Compilando...
+  GameScene.cpp
+  Generando código...
