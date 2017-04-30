@@ -2,7 +2,6 @@
 #include "AudioHeader.h"
 #include "GraphicsHeader.h"
 #include "ThreadingHeader.h"
-#include <sapi.h>
 
 
 using namespace std;
