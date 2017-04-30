@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Program Files %28x86%29\SFML-2.4.2\include\SFML;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\include\eyex-cpp;C:\Program Files %28x86%29\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\OpenCV\include;C:\Program Files %28x86%29\SFML-2.4.2\include\SFML;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\include\eyex-cpp;C:\Program Files %28x86%29\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\SFML-2.4.2\lib;C:\Program Files %28x86%29\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -136,6 +136,7 @@
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="GraphicsHeader.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="SystemHeader.h" />
     <ClInclude Include="ThreadingHeader.h" />
   </ItemGroup>

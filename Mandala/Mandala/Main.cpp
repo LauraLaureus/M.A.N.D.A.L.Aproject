@@ -48,15 +48,35 @@ int main(int argc, char* argv[]) {
 }*/
 
 
+sf::SoundBuffer myBuffer;
+sf::Sound sound;
+
+void play() {
+	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
+	myBuffer = AudioMaster::loadFile(fileName);
+	sound.setBuffer(myBuffer);
+	sound.setVolume(100);
+	sound.play();
+	
+}
+
+
 int main(int argc, char *argv[]) {
 
-	 
-	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.h");
 	
-	sf::SoundBuffer myBuffer = AudioMaster::loadFile(fileName);
+	
+	
+	play();
 	system("pause");
 
-	//AudioMaster::playSoundFile(myBuffer);
+	//AudioMaster::playSoundFile(myBuffer, 100, false);
 	system("pause");
+
+	/*sf::Sound sound;
+	sound.setBuffer(myBuffer);
+	sound.setVolume(100);
+	sound.play();
+	system("pause");*/
+
 	return 0;
 }

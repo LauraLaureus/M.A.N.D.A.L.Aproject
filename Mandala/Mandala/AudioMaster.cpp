@@ -1,8 +1,8 @@
 #include "AudioMaster.h"
 
 
-//TODO: modify to accept volumen and loop
-void AudioMaster::playSoundFile(sf::SoundBuffer buffer,float volume,bool loop) {
+
+void AudioMaster::playSoundFile(sf::SoundBuffer buffer,int volume,bool loop) {
 
 	sf::Sound sound;
 	sound.setBuffer(buffer);
@@ -32,4 +32,8 @@ std::string AudioMaster::getAbsoluteFileName(std::string fileName) {
 	absolutePath = absolutePath.substr(0, pointer + 1);
 	return absolutePath + fileName;
 
+}
+
+void AudioMaster::playDeattached(sf::Sound sound) {
+	sound.play();
 }
