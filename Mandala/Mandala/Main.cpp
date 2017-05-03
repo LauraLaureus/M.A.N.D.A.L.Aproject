@@ -3,7 +3,7 @@
 #include "GraphicsHeader.h"
 #include "ThreadingHeader.h"
 
-
+#include <unordered_map>
 
 
 using namespace std;
@@ -63,13 +63,28 @@ void play() {
 }
 
 
+std::unordered_map<std::string, sf::SoundBuffer>* soundCollection;
+
+
+void play2() {
+	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
+	sound.setBuffer((*soundCollection)[fileName]);
+	sound.play();
+}
+
+
 int main(int argc, char *argv[]) {
 
-	
-	
-	
-	play();
-	system("pause");
+	soundCollection = new std::unordered_map<std::string,sf::SoundBuffer>();
+	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
+
+	sf::SoundBuffer internalBuffer = AudioMaster::loadFile(fileName);
+	(*soundCollection)[fileName] = internalBuffer;
+	play2();
+
+
+	/*play();
+	system("pause");*/
 
 	//AudioMaster::playSoundFile(myBuffer, 100, false);
 	system("pause");
