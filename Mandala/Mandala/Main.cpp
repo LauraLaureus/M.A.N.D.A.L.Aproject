@@ -2,8 +2,8 @@
 #include "AudioHeader.h"
 #include "GraphicsHeader.h"
 #include "ThreadingHeader.h"
+#include "easylog\easyLog.h"
 
-#include <unordered_map>
 
 
 using namespace std;
@@ -93,18 +93,13 @@ int main(int argc, char *argv[]) {
 	play2(fileName,1);
 	play2(fileName2,2);
 
+	easyLog loging = *new easyLog();
+	loging.addInfoToLog("audio", fileName + "was played");
 
-	/*play();
-	system("pause");*/
 
-	//AudioMaster::playSoundFile(myBuffer, 100, false);
 	system("pause");
 
-	/*sf::Sound sound;
-	sound.setBuffer(myBuffer);
-	sound.setVolume(100);
-	sound.play();
-	system("pause");*/
+	
 
 	return 0;
 }

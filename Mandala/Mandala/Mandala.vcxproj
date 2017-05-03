@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AudioMaster.cpp" />
+    <ClCompile Include="easylog\easyLog.cpp" />
     <ClCompile Include="GameComponent.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -131,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="AudioHeader.h" />
     <ClInclude Include="AudioMaster.h" />
+    <ClInclude Include="easylog\easyLog.h" />
     <ClInclude Include="GameDataStructures.h" />
     <ClInclude Include="GameComponent.h" />
     <ClInclude Include="GameEntity.h" />

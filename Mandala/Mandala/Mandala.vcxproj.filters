@@ -19,6 +19,9 @@
     <Filter Include="AbstractDefinitions">
       <UniqueIdentifier>{1e3db918-f470-4643-b5b3-88bff5f722cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Logging">
+      <UniqueIdentifier>{3201decf-31c1-43ab-8feb-029ea4a410a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>AbstractDefinitions</Filter>
+    </ClCompile>
+    <ClCompile Include="easylog\easyLog.cpp">
+      <Filter>Logging</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +77,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Archivos de recursos</Filter>
+    </ClInclude>
+    <ClInclude Include="easylog\easyLog.h">
+      <Filter>Logging</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
