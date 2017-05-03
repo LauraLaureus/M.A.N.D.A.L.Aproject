@@ -52,6 +52,7 @@ int main(int argc, char* argv[]) {
 
 sf::SoundBuffer myBuffer;
 sf::Sound sound;
+sf::Sound sound2;
 
 void play() {
 	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
@@ -66,10 +67,16 @@ void play() {
 std::unordered_map<std::string, sf::SoundBuffer>* soundCollection;
 
 
-void play2() {
-	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
-	sound.setBuffer((*soundCollection)[fileName]);
-	sound.play();
+void play2(std::string fileName,int i) {
+	//std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
+	if (i == 1) {
+		sound.setBuffer((*soundCollection)[fileName]);
+		sound.play();
+	}
+	else {
+		sound2.setBuffer((*soundCollection)[fileName]);
+		sound2.play();
+	}
 }
 
 
@@ -77,10 +84,14 @@ int main(int argc, char *argv[]) {
 
 	soundCollection = new std::unordered_map<std::string,sf::SoundBuffer>();
 	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
+	std::string fileName2 = AudioMaster::getAbsoluteFileName("testAudio2.wav");
 
 	sf::SoundBuffer internalBuffer = AudioMaster::loadFile(fileName);
+	sf::SoundBuffer internalBuffer2 = AudioMaster::loadFile(fileName2);
 	(*soundCollection)[fileName] = internalBuffer;
-	play2();
+	(*soundCollection)[fileName2] = internalBuffer2;
+	play2(fileName,1);
+	play2(fileName2,2);
 
 
 	/*play();
