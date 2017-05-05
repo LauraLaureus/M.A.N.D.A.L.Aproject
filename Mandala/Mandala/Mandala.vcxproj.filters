@@ -81,6 +81,9 @@
     <ClInclude Include="easylog\easyLog.h">
       <Filter>Logging</Filter>
     </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>AbstractDefinitions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mandala.rc">

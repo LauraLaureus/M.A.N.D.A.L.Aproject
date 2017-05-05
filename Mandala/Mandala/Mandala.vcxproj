@@ -141,6 +141,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="SystemHeader.h" />
     <ClInclude Include="ThreadingHeader.h" />
+    <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mandala.rc" />
