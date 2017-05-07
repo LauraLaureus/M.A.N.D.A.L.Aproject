@@ -1,8 +1,3 @@
-﻿  GameEntity.cpp
-  Generando código...
-cl : Línea de comandos warning D9028: error de recompilación mínimo, revirtiendo a la compilación normal
-  Compilando...
-  GameScene.cpp
-  Generando código...
+﻿  Main.cpp
   Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.exe
   Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.pdb (Partial PDB)

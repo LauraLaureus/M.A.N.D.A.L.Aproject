@@ -50,39 +50,9 @@ int main(int argc, char* argv[]) {
 }*/
 
 
-sf::SoundBuffer myBuffer;
-sf::Sound sound;
-sf::Sound sound2;
-
-void play() {
-	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
-	myBuffer = AudioMaster::loadFile(fileName);
-	sound.setBuffer(myBuffer);
-	sound.setVolume(100);
-	sound.play();
-	
-}
-
-
-std::unordered_map<std::string, sf::SoundBuffer>* soundCollection;
-
-
-void play2(std::string fileName,int i) {
-	//std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
-	if (i == 1) {
-		sound.setBuffer((*soundCollection)[fileName]);
-		sound.play();
-	}
-	else {
-		sound2.setBuffer((*soundCollection)[fileName]);
-		sound2.play();
-	}
-}
-
-
 int main(int argc, char *argv[]) {
 
-	soundCollection = new std::unordered_map<std::string,sf::SoundBuffer>();
+	/*soundCollection = new std::unordered_map<std::string,sf::SoundBuffer>();
 	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
 	std::string fileName2 = AudioMaster::getAbsoluteFileName("testAudio2.wav");
 
@@ -94,12 +64,25 @@ int main(int argc, char *argv[]) {
 	play2(fileName2,2);
 
 	easyLog loging = *new easyLog();
-	loging.addInfoToLog("audio", fileName + "was played");
+	loging.addInfoToLog("audio", fileName + "was played");*/
 
+	SoundEffectComponent component("testAudio.wav");
+	SoundEffectComponent component2("testAudio2.wav");
+
+	component.play();
+	component2.play();
 
 	system("pause");
 
 	
 
+	component.stop();
+	component2.stop();
+
+	MusicComponent music("testAudio.wav");
+	music.play();
+
+
+	system("pause");
 	return 0;
 }

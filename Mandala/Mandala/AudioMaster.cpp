@@ -1,24 +1,6 @@
 #include "AudioMaster.h"
 
 
-
-void AudioMaster::playSoundFile(sf::SoundBuffer buffer,int volume,bool loop) {
-
-	sf::Sound sound;
-	sound.setBuffer(buffer);
-	sound.setVolume(volume);
-	sound.setLoop(loop);
-	sound.play();
-
-}
-
-sf::SoundBuffer AudioMaster::loadFile(std::string fileName) {
-	sf::SoundBuffer buffer;
-	buffer.loadFromFile(fileName);
-	return buffer;
-}
-
-
 std::string AudioMaster::getAbsoluteFileName(std::string fileName) {
 
 
@@ -32,8 +14,4 @@ std::string AudioMaster::getAbsoluteFileName(std::string fileName) {
 	absolutePath = absolutePath.substr(0, pointer + 1);
 	return absolutePath + fileName;
 
-}
-
-void AudioMaster::playDeattached(sf::Sound sound) {
-	sound.play();
 }
