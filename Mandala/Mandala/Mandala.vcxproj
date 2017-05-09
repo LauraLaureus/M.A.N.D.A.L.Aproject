@@ -69,15 +69,15 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\OpenCV\include;C:\Program Files %28x86%29\SFML-2.4.2\include\SFML;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\include\eyex-cpp;C:\Program Files %28x86%29\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\SFML-2.4.2\lib;C:\Program Files %28x86%29\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Mandala\include;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\OpenCV\include;C:\Program Files %28x86%29\SFML-2.4.2\include\SFML;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\include\eyex-cpp;C:\Program Files %28x86%29\OpenAL 1.1 SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Mandala\libs;C:\Program Files %28x86%29\SFML-2.4.2\lib;C:\Program Files %28x86%29\OpenAL 1.1 SDK\libs\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\SFML-2.4.2\include\;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\glew-1.11.0\include;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Mandala\include;C:\Program Files %28x86%29\SFML-2.4.2\include\;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\glew-1.11.0\include;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Program Files %28x86%29\SFML-2.4.2\lib;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\TobiiAPI\TobiiEyeXSdk-Cpp-1.7.489\lib\x86;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\glew-1.11.0\lib;C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Glew and Glut\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -126,6 +126,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MusicComponent.cpp" />
     <ClCompile Include="SoundEffectComponent.cpp" />
+    <ClCompile Include="TobiiDevice.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut.dll" />
@@ -145,6 +146,7 @@
     <ClInclude Include="SoundEffectComponent.h" />
     <ClInclude Include="SystemHeader.h" />
     <ClInclude Include="ThreadingHeader.h" />
+    <ClInclude Include="TobiiDevice.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>

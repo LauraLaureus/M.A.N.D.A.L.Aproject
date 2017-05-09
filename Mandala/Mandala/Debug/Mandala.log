@@ -1,3 +1,30 @@
-﻿  Main.cpp
-  Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.exe
-  Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.pdb (Partial PDB)
+﻿  TobiiDevice.cpp
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(109): error C3861: 'GetCurrentProcessId': no se encontró el identificador
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(110): error C2668: 'std::to_string': llamada ambigua a una función sobrecargada
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(614): note: puede ser 'std::string std::to_string(long double)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(609): note: o       'std::string std::to_string(double)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(604): note: o       'std::string std::to_string(float)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(599): note: o       'std::string std::to_string(unsigned __int64)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(594): note: o       'std::string std::to_string(__int64)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(589): note: o       'std::string std::to_string(unsigned long)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(584): note: o       'std::string std::to_string(long)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(579): note: o       'std::string std::to_string(unsigned int)'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\string(574): note: o       'std::string std::to_string(int)'
+  c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(110): note: al hacer coincidir la lista de argumentos '(unknown-type)'
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(111): error C3536: 'currentProcessIdStr': no se puede usar antes de inicializarse
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(111): error C2664: 'void EyeX::InteractionAgentBase::RegisterQueryHandler(const std::string &)': el argumento 1 no puede convertirse de 'int' a 'const std::string &'
+  c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(111): note: Razón: no se puede realizar la conversión de 'int' a 'const std::string'
+  c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\include\eyex-cpp\interactionagentbase.inl(111): note: Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+  SoundEffectComponent.cpp
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\soundeffectcomponent.cpp(26): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+  MusicComponent.cpp
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\musiccomponent.cpp(20): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\musiccomponent.cpp(21): warning C4800: 'int': forzando el valor a bool 'true' o 'false' (advertencia de rendimiento)
+  Main.cpp
+  GameScene.cpp
+  GameEntity.cpp
+  GameComponent.cpp
+  easyLog.cpp
+c1xx : fatal error C1083: No se puede abrir el archivo código fuente: 'easylog\easyLog.cpp': No such file or directory
+  AudioMaster.cpp
+  Generando código...
