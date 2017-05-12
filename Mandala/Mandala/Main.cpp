@@ -2,9 +2,7 @@
 #include "AudioHeader.h"
 #include "GraphicsHeader.h"
 #include "ThreadingHeader.h"
-#include "easylog\easyLog.h"
-
-
+#include "include\easylog\easyLog.h"
 
 using namespace std;
 

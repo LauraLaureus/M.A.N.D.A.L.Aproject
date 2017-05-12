@@ -39,9 +39,6 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>AbstractDefinitions</Filter>
     </ClCompile>
-    <ClCompile Include="easylog\easyLog.cpp">
-      <Filter>Logging</Filter>
-    </ClCompile>
     <ClCompile Include="SoundEffectComponent.cpp">
       <Filter>Audio</Filter>
     </ClCompile>
@@ -50,6 +47,9 @@
     </ClCompile>
     <ClCompile Include="TobiiDevice.cpp">
       <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="include\easylog\easyLog.cpp">
+      <Filter>Logging</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +87,6 @@
     <ClInclude Include="resource.h">
       <Filter>Archivos de recursos</Filter>
     </ClInclude>
-    <ClInclude Include="easylog\easyLog.h">
-      <Filter>Logging</Filter>
-    </ClInclude>
     <ClInclude Include="Transform.h">
       <Filter>AbstractDefinitions</Filter>
     </ClInclude>
@@ -101,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="TobiiDevice.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\easylog\easyLog.h">
+      <Filter>Logging</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -119,10 +119,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AudioMaster.cpp" />
-    <ClCompile Include="easylog\easyLog.cpp" />
     <ClCompile Include="GameComponent.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameScene.cpp" />
+    <ClCompile Include="include\easylog\easyLog.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MusicComponent.cpp" />
     <ClCompile Include="SoundEffectComponent.cpp" />
@@ -135,12 +135,12 @@
   <ItemGroup>
     <ClInclude Include="AudioHeader.h" />
     <ClInclude Include="AudioMaster.h" />
-    <ClInclude Include="easylog\easyLog.h" />
     <ClInclude Include="GameDataStructures.h" />
     <ClInclude Include="GameComponent.h" />
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="GraphicsHeader.h" />
+    <ClInclude Include="include\easylog\easyLog.h" />
     <ClInclude Include="MusicComponent.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SoundEffectComponent.h" />
