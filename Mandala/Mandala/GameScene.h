@@ -1,13 +1,15 @@
 #pragma once
 #include "GameEntity.h"
-class GameScene
+#include "Preload.h"
+class GameScene : public Preloader
 {
 
 private:
-	std::list<GameEntity> entities;
+	std::vector<GameEntity> entities;
 
 public:
 	GameScene();
 	~GameScene();
+	void preload();
 };
 

@@ -22,6 +22,9 @@
     <Filter Include="Logging">
       <UniqueIdentifier>{3201decf-31c1-43ab-8feb-029ea4a410a5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{928b1040-e8a1-46bc-9ca8-ae8ee4853573}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -101,6 +104,9 @@
     </ClInclude>
     <ClInclude Include="include\easylog\easyLog.h">
       <Filter>Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Preload.h">
+      <Filter>Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
