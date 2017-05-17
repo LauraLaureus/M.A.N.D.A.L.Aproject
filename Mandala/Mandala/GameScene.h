@@ -1,7 +1,9 @@
 #pragma once
 #include "GameEntity.h"
 #include "Preload.h"
-class GameScene : public Preloader
+#include "Renderizable.h"
+
+class GameScene : public Preloader, public Renderizable
 {
 
 private:

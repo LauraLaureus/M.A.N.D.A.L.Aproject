@@ -4,8 +4,9 @@
 #include "ThreadingHeader.h"
 #include "Transform.h"
 #include "Preload.h"
+#include "Renderizable.h"
 
-class GameEntity: public Preloader
+class GameEntity: public Preloader, public Renderizable
 {
 private:
 
