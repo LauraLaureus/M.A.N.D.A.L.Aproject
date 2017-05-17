@@ -143,6 +143,7 @@
     <ClInclude Include="include\easylog\easyLog.h" />
     <ClInclude Include="MusicComponent.h" />
     <ClInclude Include="Preload.h" />
+    <ClInclude Include="Renderizable.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SoundEffectComponent.h" />
     <ClInclude Include="SystemHeader.h" />

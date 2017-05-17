@@ -108,6 +108,9 @@
     <ClInclude Include="Preload.h">
       <Filter>Interfaces</Filter>
     </ClInclude>
+    <ClInclude Include="Renderizable.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Mandala.rc">
