@@ -4,11 +4,7 @@
 
 TobiiInterface::TobiiInterface()
 {
-	TX_CONTEXTHANDLE hContext = TX_EMPTY_HANDLE;
-	TX_TICKET hConnectionStateChangedTicket = TX_INVALID_TICKET;
-	TX_TICKET hEventHandlerTicket = TX_INVALID_TICKET;
-	BOOL success;
-
+	
 	// initialize and enable the context that is our link to the EyeX Engine.
 	success = txInitializeEyeX(TX_EYEXCOMPONENTOVERRIDEFLAG_NONE, NULL, NULL, NULL, NULL) == TX_RESULT_OK;
 	success &= txCreateContext(&hContext, TX_FALSE) == TX_RESULT_OK;
@@ -24,10 +20,16 @@ TobiiInterface::TobiiInterface()
 	else {
 		printf("Initialization failed.\n");
 	}
-	printf("Press any key to exit...\n");
-	_getch();
-	printf("Exiting.\n");
+	
+	
+	
+	
+}
 
+
+TobiiInterface::~TobiiInterface()
+{
+	
 	// disable and delete the context.
 	txDisableConnection(hContext);
 	txReleaseObject(&g_hGlobalInteractorSnapshot);
@@ -40,13 +42,6 @@ TobiiInterface::TobiiInterface()
 
 }
 
-
-TobiiInterface::~TobiiInterface()
-{
-}
-
 glm::vec2 TobiiInterface::getGazePoint() {
-  /*glm::vec2 result(GazeX, GazeY);
-  return result;*/
-	return glm::vec2();
+	return getGaze();
 }

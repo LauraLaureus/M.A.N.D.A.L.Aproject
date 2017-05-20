@@ -3,6 +3,7 @@
 #include "GraphicsHeader.h"
 #include "ThreadingHeader.h"
 #include "include\easylog\easyLog.h"
+#include "TobiiInterface.h"
 
 using namespace std;
 
@@ -50,22 +51,9 @@ int main(int argc, char* argv[]) {
 
 int main(int argc, char *argv[]) {
 
-	/*soundCollection = new std::unordered_map<std::string,sf::SoundBuffer>();
-	std::string fileName = AudioMaster::getAbsoluteFileName("testAudio.wav");
-	std::string fileName2 = AudioMaster::getAbsoluteFileName("testAudio2.wav");
-
-	sf::SoundBuffer internalBuffer = AudioMaster::loadFile(fileName);
-	sf::SoundBuffer internalBuffer2 = AudioMaster::loadFile(fileName2);
-	(*soundCollection)[fileName] = internalBuffer;
-	(*soundCollection)[fileName2] = internalBuffer2;
-	play2(fileName,1);
-	play2(fileName2,2);
-
-	easyLog loging = *new easyLog();
-	loging.addInfoToLog("audio", fileName + "was played");*/
-
-	SoundEffectComponent component("testAudio.wav");
-	SoundEffectComponent component2("testAudio2.wav");
+	
+	/*SoundEffectComponent component("/Assets/audio/testAudio.wav");
+	SoundEffectComponent component2("/Assets/audio/testAudio2.wav");
 
 	component.play();
 	component2.play();
@@ -80,7 +68,13 @@ int main(int argc, char *argv[]) {
 	MusicComponent music("testAudio.wav");
 	music.play();
 
-
+	*/
+	TobiiInterface* tobii = new TobiiInterface();
+	system("pause");
+	glm::vec2 gaze = tobii->getGazePoint();
+	delete tobii;
+	system("pause");
+	printf("Gaze: %f,%f", gaze.x, gaze.y);
 	system("pause");
 	return 0;
 }

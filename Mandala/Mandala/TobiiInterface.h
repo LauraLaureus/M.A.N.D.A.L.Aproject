@@ -11,5 +11,10 @@ public:
 	TobiiInterface();
 	~TobiiInterface();
 	glm::vec2 getGazePoint();
+private:
+	TX_CONTEXTHANDLE hContext = TX_EMPTY_HANDLE;
+	TX_TICKET hConnectionStateChangedTicket = TX_INVALID_TICKET;
+	TX_TICKET hEventHandlerTicket = TX_INVALID_TICKET;
+	BOOL success;
 };
 
