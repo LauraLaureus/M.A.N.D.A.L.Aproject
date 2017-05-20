@@ -1,3 +1,7 @@
-﻿  TobiiDevice.cpp
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\tobiidevice.cpp(73): error C3867: 'TobiiDevice::OnSnapshotCommitted': sintaxis no estándar; utilice '&' para crear un puntero al miembro
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\tobiidevice.cpp(93): error C3867: 'TobiiDevice::OnEngineConnectionStateChanged': sintaxis no estándar; utilice '&' para crear un puntero al miembro
+﻿  TobiiCore.cpp
+  Generando código...
+  Compilando...
+  TobiiInterface.cpp
+  Generando código...
+  Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.exe
+  Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.pdb (Partial PDB)

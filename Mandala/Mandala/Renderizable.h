@@ -15,7 +15,7 @@ protected:
 	std::vector<GLshort> elements;
 
 public:
-	virtual void render();
+	virtual void render() {};
 	void loadObj(std::string filename, std::vector<glm::vec4>& vertices, std::vector<glm::vec3>& normals, std::vector<GLshort> ) {
 	
 		using namespace std;

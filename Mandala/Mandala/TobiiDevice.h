@@ -20,6 +20,7 @@ private:
 	TX_HANDLE g_hGlobalInteractorSnapshot = TX_EMPTY_HANDLE;
 	TX_TICKET hConnectionStateChangedTicket = TX_INVALID_TICKET;
 
+
 	void TX_CALLCONVENTION OnSnapshotCommitted(TX_CONSTHANDLE hAsyncData, TX_USERPARAM param);
 	void TX_CALLCONVENTION OnEngineConnectionStateChanged(TX_CONNECTIONSTATE connectionState, TX_USERPARAM userParam);
 	bool InitializeGlobalInteractorSnapshot(TX_CONTEXTHANDLE hContext);

@@ -62,6 +62,7 @@ void TobiiDevice::OnGazeDataEvent(TX_HANDLE hGazeDataBehavior)
 	}
 }
 
+
 void TX_CALLCONVENTION TobiiDevice::OnEngineConnectionStateChanged(TX_CONNECTIONSTATE connectionState, TX_USERPARAM userParam)
 {
 	switch (connectionState) {
@@ -70,7 +71,7 @@ void TX_CALLCONVENTION TobiiDevice::OnEngineConnectionStateChanged(TX_CONNECTION
 		printf("The connection state is now CONNECTED (We are connected to the EyeX Engine)\n");
 		// commit the snapshot with the global interactor as soon as the connection to the engine is established.
 		// (it cannot be done earlier because committing means "send to the engine".)
-		success = txCommitSnapshotAsync(g_hGlobalInteractorSnapshot, this->OnSnapshotCommitted, NULL) == TX_RESULT_OK;
+		success = txCommitSnapshotAsync(g_hGlobalInteractorSnapshot,&TobiiDevice::OnSnapshotCommitted, NULL) == TX_RESULT_OK;
 		if (!success) {
 			printf("Failed to initialize the data stream.\n");
 		}
@@ -90,7 +91,7 @@ TobiiDevice::TobiiDevice()
 	txCreateContext(&hContext, TX_FALSE);
 	
 	InitializeGlobalInteractorSnapshot(hContext);
-	txRegisterConnectionStateChangedHandler(hContext, &hConnectionStateChangedTicket, this->OnEngineConnectionStateChanged, NULL);
+	txRegisterConnectionStateChangedHandler(hContext, &hConnectionStateChangedTicket,(TX_CONNECTIONSTATECHANGEDCALLBACK) (&TobiiDevice::OnEngineConnectionStateChanged), NULL);
 	
 	
 	txEnableConnection(hContext);

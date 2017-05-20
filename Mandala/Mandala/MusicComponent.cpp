@@ -38,3 +38,4 @@ void MusicComponent::setVolumen(int v) {
 void MusicComponent::setLoop(bool l) {
 	this->loop = l;
 }
+

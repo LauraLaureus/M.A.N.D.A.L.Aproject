@@ -2,5 +2,5 @@
 
 class Preloader {
 public:
-	virtual void preload();
+	virtual void preload() {};
 };

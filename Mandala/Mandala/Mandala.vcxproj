@@ -124,9 +124,10 @@
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="include\easylog\easyLog.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TobiiCore.cpp" />
     <ClCompile Include="MusicComponent.cpp" />
     <ClCompile Include="SoundEffectComponent.cpp" />
-    <ClCompile Include="TobiiDevice.cpp" />
+    <ClCompile Include="TobiiInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut.dll" />
@@ -148,7 +149,8 @@
     <ClInclude Include="SoundEffectComponent.h" />
     <ClInclude Include="SystemHeader.h" />
     <ClInclude Include="ThreadingHeader.h" />
-    <ClInclude Include="TobiiDevice.h" />
+    <ClInclude Include="TobiiCore.h" />
+    <ClInclude Include="TobiiInterface.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>

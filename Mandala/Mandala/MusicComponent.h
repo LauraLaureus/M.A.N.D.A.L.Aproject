@@ -17,6 +17,8 @@ public:
 	MusicComponent(std::string name);
 	~MusicComponent();
 
+
+
 private:
 	std::string filename;
 	std::string filePath;

@@ -48,11 +48,14 @@
     <ClCompile Include="MusicComponent.cpp">
       <Filter>Audio</Filter>
     </ClCompile>
-    <ClCompile Include="TobiiDevice.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="include\easylog\easyLog.cpp">
       <Filter>Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="TobiiInterface.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="TobiiCore.cpp">
+      <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,9 +102,6 @@
     <ClInclude Include="MusicComponent.h">
       <Filter>Audio</Filter>
     </ClInclude>
-    <ClInclude Include="TobiiDevice.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="include\easylog\easyLog.h">
       <Filter>Logging</Filter>
     </ClInclude>
@@ -110,6 +110,12 @@
     </ClInclude>
     <ClInclude Include="Renderizable.h">
       <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="TobiiInterface.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="TobiiCore.h">
+      <Filter>Archivos de código fuente</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
