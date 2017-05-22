@@ -101,13 +101,42 @@ void OnGazeDataEvent(TX_HANDLE hGazeDataBehavior)
 	}
 }
 
+
+
 /*
- * Callback function invoked when an event has been received from the EyeX Engine.
- */
+* Handles an event from the fixation data stream.
+*/
+void OnFixationDataEvent(TX_HANDLE hFixationDataBehavior)
+{
+	TX_FIXATIONDATAEVENTPARAMS eventParams;
+	TX_FIXATIONDATAEVENTTYPE eventType;
+	char* eventDescription;
+
+	if (txGetFixationDataEventParams(hFixationDataBehavior, &eventParams) == TX_RESULT_OK) {
+		eventType = eventParams.EventType;
+
+		eventDescription = (eventType == TX_FIXATIONDATAEVENTTYPE_DATA) ? "Data"
+			: ((eventType == TX_FIXATIONDATAEVENTTYPE_END) ? "End"
+				: "Begin");
+
+		printf("Fixation %s: (%.1f, %.1f) timestamp %.0f ms\n", eventDescription, eventParams.X, eventParams.Y, eventParams.Timestamp);
+	}
+	else {
+		printf("Failed to interpret fixation data event packet.\n");
+	}
+}
+
+
+/*
+* Callback function invoked when an event has been received from the EyeX Engine.
+*/
 void TX_CALLCONVENTION HandleEvent(TX_CONSTHANDLE hAsyncData, TX_USERPARAM userParam)
 {
 	TX_HANDLE hEvent = TX_EMPTY_HANDLE;
 	TX_HANDLE hBehavior = TX_EMPTY_HANDLE;
+
+	TX_HANDLE fEvent = TX_EMPTY_HANDLE;
+	TX_HANDLE fBehavior = TX_EMPTY_HANDLE;
 
 	txGetAsyncDataContent(hAsyncData, &hEvent);
 
@@ -119,10 +148,15 @@ void TX_CALLCONVENTION HandleEvent(TX_CONSTHANDLE hAsyncData, TX_USERPARAM userP
 		txReleaseObject(&hBehavior);
 	}
 
+
+	if (txGetEventBehavior(fEvent, &fBehavior, TX_BEHAVIORTYPE_FIXATIONDATA) == TX_RESULT_OK) {
+		OnFixationDataEvent(hBehavior);
+		txReleaseObject(&hBehavior);
+	}
+
 	// NOTE since this is a very simple application with a single interactor and a single data stream, 
 	// our event handling code can be very simple too. A more complex application would typically have to 
 	// check for multiple behaviors and route events based on interactor IDs.
 
 	txReleaseObject(&hEvent);
 }
-

@@ -13,5 +13,6 @@ public:
 	GameScene();
 	~GameScene();
 	void preload();
+	void render();
 };
 

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-/*
+
 void changeViewPort(int w, int h)
 {
 	glViewport(0, 0, w, h);
@@ -21,22 +21,19 @@ void render()
 
 
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
 
-	// Initialize GLUT
 	glutInit(&argc, argv);
-	// Set up some memory buffers for our display
+	
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
-	// Set the window size
-	glutInitWindowSize(800, 600);
-	// Create the window with the title "Hello,GL"
-	glutCreateWindow("Hello, GL");
-	// Bind the two functions (above) to respond when necessary
-	glutReshapeFunc(changeViewPort);
-	glutDisplayFunc(render);
+	glutInitWindowSize(1200,768 );
+	
 
-	// Very important!  This initializes the entry points in the OpenGL driver so we can 
-	// call all the functions in the API.
+	glutCreateWindow("M.A.N.D.A.L.A. project");
+	glutFullScreen();
+
+	glutCloseFunc();
+
 	GLenum err = glewInit();
 	if (GLEW_OK != err) {
 		fprintf(stderr, "GLEW error");
@@ -44,14 +41,15 @@ int main(int argc, char* argv[]) {
 	}
 
 
-	glutMainLoop();
-	return 0;
-}*/
 
-
-int main(int argc, char *argv[]) {
-
+	//Initialization zone 
+	/*
+	CREATE SCENES OBJECTS AND SO ON here. 
+	*/
+	TobiiInterface* tobii = new TobiiInterface();
+	glm::vec2 gaze = tobii->getGazePoint();
 	
+
 	/*SoundEffectComponent component("/Assets/audio/testAudio.wav");
 	SoundEffectComponent component2("/Assets/audio/testAudio2.wav");
 
@@ -69,12 +67,18 @@ int main(int argc, char *argv[]) {
 	music.play();
 
 	*/
-	TobiiInterface* tobii = new TobiiInterface();
-	system("pause");
-	glm::vec2 gaze = tobii->getGazePoint();
+
+	std::string sceneReturn;
+
+	//GAME LOOP
+	while (true) {
+		glutMainLoopEvent();
+		gaze = tobii->getGazePoint();
+		printf("Gaze: %f,%f", gaze.x, gaze.y);
+	}
+	
 	delete tobii;
-	system("pause");
-	printf("Gaze: %f,%f", gaze.x, gaze.y);
-	system("pause");
+
+	
 	return 0;
 }

@@ -18,3 +18,7 @@ void GameScene::preload()
 		((Preloader)this->entities[e]).preload();
 	}
 }
+
+void GameScene::render() {
+
+}
