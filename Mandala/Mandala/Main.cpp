@@ -4,6 +4,7 @@
 #include "ThreadingHeader.h"
 #include "include\easylog\easyLog.h"
 #include "TobiiInterface.h"
+#include "GameDataStructures.h"
 
 using namespace std;
 
@@ -32,7 +33,7 @@ int main(int argc, char *argv[]) {
 	glutCreateWindow("M.A.N.D.A.L.A. project");
 	glutFullScreen();
 
-	glutCloseFunc();
+	
 
 	GLenum err = glewInit();
 	if (GLEW_OK != err) {
@@ -46,9 +47,14 @@ int main(int argc, char *argv[]) {
 	/*
 	CREATE SCENES OBJECTS AND SO ON here. 
 	*/
-	TobiiInterface* tobii = new TobiiInterface();
+
+	GameScene principal = *new GameScene();
+
+	principal.initRenderEngine();
+
+	/*TobiiInterface* tobii = new TobiiInterface();
 	glm::vec2 gaze = tobii->getGazePoint();
-	
+	*/
 
 	/*SoundEffectComponent component("/Assets/audio/testAudio.wav");
 	SoundEffectComponent component2("/Assets/audio/testAudio2.wav");
@@ -73,11 +79,11 @@ int main(int argc, char *argv[]) {
 	//GAME LOOP
 	while (true) {
 		glutMainLoopEvent();
-		gaze = tobii->getGazePoint();
-		printf("Gaze: %f,%f", gaze.x, gaze.y);
+		//gaze = tobii->getGazePoint();
+		//printf("Gaze: %f,%f", gaze.x, gaze.y);
 	}
 	
-	delete tobii;
+	//delete tobii;
 
 	
 	return 0;
