@@ -48,9 +48,12 @@ int main(int argc, char *argv[]) {
 	CREATE SCENES OBJECTS AND SO ON here. 
 	*/
 
-	GameScene principal = *new GameScene();
+	unordered_map<std::string, GameScene*> SceneManager = *new unordered_map<std::string, GameScene*>();
+	GameScene mainScene = *new GameScene("Main");
 
-	principal.initRenderEngine();
+	SceneManager["End"] = new GameScene("End");
+	SceneManager["Main"] = &mainScene;
+
 
 	/*TobiiInterface* tobii = new TobiiInterface();
 	glm::vec2 gaze = tobii->getGazePoint();
@@ -75,12 +78,28 @@ int main(int argc, char *argv[]) {
 	*/
 
 	std::string sceneReturn;
-
+	std::string currentSceneName = mainScene.getName();
 	//GAME LOOP
-	while (true) {
+	while (true) {	
+		if (!SceneManager[currentSceneName]->didInitRendering()) {
+			SceneManager[currentSceneName]->initRenderEngine();
+		}
 		glutMainLoopEvent();
+
 		//gaze = tobii->getGazePoint();
 		//printf("Gaze: %f,%f", gaze.x, gaze.y);
+
+		SceneManager[currentSceneName].updateCamera(gaze);
+		sceneReturn = SceneManager[currentSceneName].update(gaze);
+
+		SceneManager[currentSceneName].render();
+
+		if (currentSceneName != sceneReturn) {
+			currentSceneName = sceneReturn;
+		}
+
+		if (currentSceneName == "End")  break;
+
 	}
 	
 	//delete tobii;
