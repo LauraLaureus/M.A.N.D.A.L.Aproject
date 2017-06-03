@@ -5,7 +5,7 @@
 void GameEntity::preloadChildren()
 {
 	for (int c = 0; c < this->childrenEntities.size(); c++) {
-		((Preloader)(this->childrenEntities[c])).preload();
+		((Preloader)*(this->childrenEntities[c])).preload();
 	}
 }
 
@@ -24,7 +24,7 @@ void GameEntity::preload()
 	std::thread childrenLoader(&GameEntity::preloadChildren,this);
 	
 	for (int c = 0; c < this->components.size(); c++) {
-		((Preloader)this->components[c]).preload();
+		((Preloader)*this->components[c]).preload();
 	}
 
 	childrenLoader.join();
@@ -35,15 +35,17 @@ std::string GameEntity::getName() {
 	return this->name;
 }
 
-void GameEntity::update(glm::vec2 gaze) {
-
-	for (int i = 0; i < childrenEntities.size; i++) {
-		childrenEntities[i]->update(gaze);
+std::string GameEntity::update(glm::vec2 gaze) {
+	std::string result = "",aux;
+	
+	for (int i = 0; i < childrenEntities.size(); i++) {
+		aux = childrenEntities[i]->update(gaze);
 	}
 
-	for (int i = 0; i < components.size; i++) {
-		components[i]->update(gaze);
+	for (int i = 0; i < components.size(); i++) {
+		aux = components[i]->update(gaze);
 	}
+	return aux;
 }
 
 void GameEntity::addChild(GameEntity* child) {

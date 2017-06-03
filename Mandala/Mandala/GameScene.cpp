@@ -33,7 +33,8 @@ void GameScene::initRenderEngine() {
 	glEnable(GL_DEPTH_TEST);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glFrustum(-1, 1, -1, 1, 1, 10);
+	//glFrustum(-1, 1, -1, 1, 1, 10);
+	gluPerspective(60, 1200 / 768, 1, 50);
 	glMatrixMode(GL_MODELVIEW);
 
 	this->renderinInitialized = true;
@@ -54,7 +55,7 @@ void GameScene::render() {
 	glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
 	glLoadIdentity();
 
-	for (int i = 0; i < this->entities.size; i++) {
+	for (int i = 0; i < this->entities.size(); i++) {
 		((Renderizable)*(entities[i])).render();
 	}
 
@@ -84,9 +85,13 @@ std::string GameScene::getName() {
 	return this->name;
 }
 
-void GameScene::update(glm::vec2 gaze) {
+std::string GameScene::update(glm::vec2 gaze) {
+	std::string result = this->getName();
+	std::string aux;
 	for (int i = 0; i < this->entities.size(); i++) {
-		(*entities[i]).update(gaze);
+		aux = entities[i]->update(gaze);
 	}
+	if (aux != "")  return aux;
+	return result;
 }
 

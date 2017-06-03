@@ -55,9 +55,9 @@ int main(int argc, char *argv[]) {
 	SceneManager["Main"] = &mainScene;
 
 
-	/*TobiiInterface* tobii = new TobiiInterface();
+	TobiiInterface* tobii = new TobiiInterface();
 	glm::vec2 gaze = tobii->getGazePoint();
-	*/
+	
 
 	/*SoundEffectComponent component("/Assets/audio/testAudio.wav");
 	SoundEffectComponent component2("/Assets/audio/testAudio2.wav");
@@ -86,13 +86,13 @@ int main(int argc, char *argv[]) {
 		}
 		glutMainLoopEvent();
 
-		//gaze = tobii->getGazePoint();
+		gaze = tobii->getGazePoint();
 		//printf("Gaze: %f,%f", gaze.x, gaze.y);
 
-		SceneManager[currentSceneName].updateCamera(gaze);
-		sceneReturn = SceneManager[currentSceneName].update(gaze);
+		SceneManager[currentSceneName]->updateCamera(gaze);
+		sceneReturn = SceneManager[currentSceneName]->update(gaze);
 
-		SceneManager[currentSceneName].render();
+		SceneManager[currentSceneName]->render();
 
 		if (currentSceneName != sceneReturn) {
 			currentSceneName = sceneReturn;

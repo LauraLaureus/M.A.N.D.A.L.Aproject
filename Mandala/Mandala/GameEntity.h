@@ -25,7 +25,7 @@ public:
 	std::string getName();
 
 	void preload();
-	void update(glm::vec2 gaze);
+	std::string update(glm::vec2 gaze);
 
 	void addChild(GameEntity* child);
 	void removeChild(GameEntity* child);

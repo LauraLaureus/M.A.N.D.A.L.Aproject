@@ -24,7 +24,7 @@ public:
 	void render();
 	void updateCamera(glm::vec2 gaze);
 
-	void update(glm::vec2 gaze);
+	std::string update(glm::vec2 gaze);
 
 	void addEntity(GameEntity* newEntity);
 	void removeEntity(GameEntity* toRemove);

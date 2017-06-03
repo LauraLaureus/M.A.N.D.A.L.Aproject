@@ -2,7 +2,13 @@
 
 void GameComponent::preload() {}
 
-void GameComponent::update(glm::vec2 gaze) {}
+std::string GameComponent::update(glm::vec2 gaze) {
+	return "";
+}
+
+GameComponent::GameComponent() {
+	
+}
 
 GameComponent::~GameComponent()
 {
