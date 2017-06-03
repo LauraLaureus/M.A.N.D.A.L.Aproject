@@ -7,6 +7,8 @@ class GameComponent: public Preloader, public Renderizable
 public:
 	virtual void preload();
 
+	void update(glm::vec2 gaze);
+
 	~GameComponent();
 };
 

@@ -70,7 +70,7 @@ void GameScene::addEntity(GameEntity* newEntity) {
 }
 
 void GameScene::removeEntity(GameEntity* toRemove) {
-	this->entities.erase(
+	this->entities.erase(this->entities.begin()+
 		std::distance(this->entities.begin(),
 			std::find(this->entities.begin(), this->entities.end(), toRemove)
 		)
