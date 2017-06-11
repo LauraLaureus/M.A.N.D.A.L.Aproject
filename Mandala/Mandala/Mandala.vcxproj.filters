@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de código fuente">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Archivos de encabezado">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -13,50 +9,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Audio">
-      <UniqueIdentifier>{8f7e93f2-7953-4679-acdb-e0beceda4d8c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AbstractDefinitions">
-      <UniqueIdentifier>{1e3db918-f470-4643-b5b3-88bff5f722cd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Logging">
       <UniqueIdentifier>{3201decf-31c1-43ab-8feb-029ea4a410a5}</UniqueIdentifier>
     </Filter>
     <Filter Include="Interfaces">
       <UniqueIdentifier>{928b1040-e8a1-46bc-9ca8-ae8ee4853573}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DataStructures">
+      <UniqueIdentifier>{1e3db918-f470-4643-b5b3-88bff5f722cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{036c2f7d-c15f-45f5-97e0-b7519675c984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Audio">
+      <UniqueIdentifier>{8f7e93f2-7953-4679-acdb-e0beceda4d8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Devices">
+      <UniqueIdentifier>{f2554e7c-031d-4548-90cf-bfdd98eac76b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="AudioMaster.cpp">
-      <Filter>Audio</Filter>
+      <Filter>Components\Audio</Filter>
     </ClCompile>
     <ClCompile Include="GameComponent.cpp">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClCompile>
     <ClCompile Include="GameEntity.cpp">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClCompile>
     <ClCompile Include="SoundEffectComponent.cpp">
-      <Filter>Audio</Filter>
+      <Filter>Components\Audio</Filter>
     </ClCompile>
     <ClCompile Include="MusicComponent.cpp">
-      <Filter>Audio</Filter>
+      <Filter>Components\Audio</Filter>
     </ClCompile>
     <ClCompile Include="include\easylog\easyLog.cpp">
       <Filter>Logging</Filter>
     </ClCompile>
-    <ClCompile Include="TobiiInterface.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="TobiiCore.cpp">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>Devices</Filter>
     </ClCompile>
+    <ClCompile Include="TobiiInterface.cpp">
+      <Filter>Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut.dll" />
@@ -76,16 +76,16 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="AudioMaster.h">
-      <Filter>Audio</Filter>
+      <Filter>Components\Audio</Filter>
     </ClInclude>
     <ClInclude Include="GameComponent.h">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClInclude>
     <ClInclude Include="GameEntity.h">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClInclude>
     <ClInclude Include="GameScene.h">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClInclude>
     <ClInclude Include="GameDataStructures.h">
       <Filter>Archivos de encabezado</Filter>
@@ -94,13 +94,13 @@
       <Filter>Archivos de recursos</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
-      <Filter>AbstractDefinitions</Filter>
+      <Filter>DataStructures</Filter>
     </ClInclude>
     <ClInclude Include="SoundEffectComponent.h">
-      <Filter>Audio</Filter>
+      <Filter>Components\Audio</Filter>
     </ClInclude>
     <ClInclude Include="MusicComponent.h">
-      <Filter>Audio</Filter>
+      <Filter>Components\Audio</Filter>
     </ClInclude>
     <ClInclude Include="include\easylog\easyLog.h">
       <Filter>Logging</Filter>
@@ -115,7 +115,7 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="TobiiCore.h">
-      <Filter>Archivos de código fuente</Filter>
+      <Filter>Devices</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

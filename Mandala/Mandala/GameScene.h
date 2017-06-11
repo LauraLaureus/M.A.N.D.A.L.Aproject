@@ -4,6 +4,7 @@
 #include "Renderizable.h"
 #include "GraphicsHeader.h"
 
+class GameEntity;
 class GameScene : public Preloader, public Renderizable
 {
 

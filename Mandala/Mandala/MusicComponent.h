@@ -14,7 +14,7 @@ public:
 	void setVolumen(int v);
 	void setLoop(bool l);
 
-	MusicComponent(std::string name);
+	MusicComponent(GameEntity* parent,std::string name);
 	~MusicComponent();
 
 

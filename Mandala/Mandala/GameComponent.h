@@ -1,19 +1,23 @@
 #pragma once
 #include "Preload.h"
 #include "Renderizable.h"
+#include "GameDataStructures.h"
 
+class GameEntity;
 
 class GameComponent: public Preloader, public Renderizable
 {
-private:
-	
+protected:
+	GameEntity* parent;
+
 public:
 	
-	virtual void preload();
 
+	GameComponent(GameEntity* parent);
+	~GameComponent();
+
+	virtual void preload();
 	std::string update(glm::vec2 gaze);
 
-	GameComponent();
-	~GameComponent();
 };
 

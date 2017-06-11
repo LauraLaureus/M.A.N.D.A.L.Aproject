@@ -2,7 +2,7 @@
 
 
 
-MusicComponent::MusicComponent(std::string name)
+MusicComponent::MusicComponent(GameEntity* parent,std::string name): GameComponent(parent)
 {
 
 	this->filename = name;

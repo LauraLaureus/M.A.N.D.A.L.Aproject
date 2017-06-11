@@ -6,6 +6,7 @@
 #include "Preload.h"
 #include "Renderizable.h"
 
+class GameComponent;
 class GameEntity: public Preloader, public Renderizable
 {
 private:

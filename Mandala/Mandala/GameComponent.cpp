@@ -6,8 +6,8 @@ std::string GameComponent::update(glm::vec2 gaze) {
 	return "";
 }
 
-GameComponent::GameComponent() {
-	
+GameComponent::GameComponent(GameEntity* parent) {
+	this->parent = parent;
 }
 
 GameComponent::~GameComponent()

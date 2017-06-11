@@ -2,7 +2,7 @@
 
 
 
-SoundEffectComponent::SoundEffectComponent(std::string name)
+SoundEffectComponent::SoundEffectComponent(GameEntity* parent,std::string name) : GameComponent(parent)
 {
 	this->filename = name;
 	this->filePath = AudioMaster::getAbsoluteFileName(name);

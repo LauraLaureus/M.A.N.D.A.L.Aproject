@@ -1,13 +1,16 @@
 #pragma once
-#include "GameComponent.h"
+
+#include "GameDataStructures.h"
 #include "SystemHeader.h"
 #include "AudioHeader.h"
+
 
 class SoundEffectComponent :
 	public GameComponent
 {
 public:
-	SoundEffectComponent(std::string name);
+	
+	SoundEffectComponent(GameEntity* parent,std::string name);
 	~SoundEffectComponent();
 
 	void play(int volume = 100,bool loop = false );

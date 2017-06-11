@@ -31,8 +31,7 @@ int main(int argc, char *argv[]) {
 	
 
 	glutCreateWindow("M.A.N.D.A.L.A. project");
-	glutFullScreen();
-
+	glutFullScreenToggle();
 	
 
 	GLenum err = glewInit();
@@ -98,7 +97,11 @@ int main(int argc, char *argv[]) {
 			currentSceneName = sceneReturn;
 		}
 
-		if (currentSceneName == "End")  break;
+		if (currentSceneName == "End") {
+			glutLeaveMainLoop();
+			break;
+
+		} 
 
 	}
 	
