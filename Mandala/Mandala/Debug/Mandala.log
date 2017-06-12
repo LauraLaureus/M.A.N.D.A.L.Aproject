@@ -1,11 +1,4 @@
-﻿  MusicComponent.cpp
+﻿  Main.cpp
 c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\renderizable.h(56): warning C4018: '<': no coinciden signed/unsigned
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\musiccomponent.cpp(20): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\laura\documents\m.a.n.d.a.l.aproject\mandala\mandala\musiccomponent.cpp(21): warning C4800: 'int': forzando el valor a bool 'true' o 'false' (advertencia de rendimiento)
-  Generando código...
-  Omitiendo... (no se detectaron cambios relevantes)
-  SoundEffectComponent.cpp
-  Main.cpp
-  AudioMaster.cpp
   Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.exe
   Mandala.vcxproj -> C:\Users\Laura\Documents\M.A.N.D.A.L.Aproject\Mandala\Debug\Mandala.pdb (Partial PDB)

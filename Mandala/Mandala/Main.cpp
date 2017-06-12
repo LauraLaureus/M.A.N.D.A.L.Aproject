@@ -1,3 +1,4 @@
+#pragma once
 #include "SystemHeader.h"
 #include "AudioHeader.h"
 #include "GraphicsHeader.h"
@@ -5,9 +6,17 @@
 #include "include\easylog\easyLog.h"
 #include "TobiiInterface.h"
 #include "GameDataStructures.h"
+#include <stdio.h>
 
 using namespace std;
 
+bool scapeKey;
+
+void ScapeKey(unsigned char key, int x, int y) {
+	if (key == 27) {
+		scapeKey = true;
+	}
+}
 
 void changeViewPort(int w, int h)
 {
@@ -27,12 +36,11 @@ int main(int argc, char *argv[]) {
 	glutInit(&argc, argv);
 	
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
-	glutInitWindowSize(1200,768 );
-	
-
+	glutInitWindowSize(1080,720 );
 	glutCreateWindow("M.A.N.D.A.L.A. project");
-	glutFullScreenToggle();
+	glutFullScreen();
 	
+	glutKeyboardFunc(ScapeKey);
 
 	GLenum err = glewInit();
 	if (GLEW_OK != err) {
@@ -57,6 +65,7 @@ int main(int argc, char *argv[]) {
 	TobiiInterface* tobii = new TobiiInterface();
 	glm::vec2 gaze = tobii->getGazePoint();
 	
+	bool scapeKeyPressed = false;
 
 	/*SoundEffectComponent component("/Assets/audio/testAudio.wav");
 	SoundEffectComponent component2("/Assets/audio/testAudio2.wav");
@@ -86,26 +95,34 @@ int main(int argc, char *argv[]) {
 		glutMainLoopEvent();
 
 		gaze = tobii->getGazePoint();
+		scapeKeyPressed = scapeKey;
+		
+
 		//printf("Gaze: %f,%f", gaze.x, gaze.y);
 
 		SceneManager[currentSceneName]->updateCamera(gaze);
 		sceneReturn = SceneManager[currentSceneName]->update(gaze);
 
 		SceneManager[currentSceneName]->render();
-
-		if (currentSceneName != sceneReturn) {
-			currentSceneName = sceneReturn;
-		}
+		
+		if (scapeKeyPressed)
+			currentSceneName = "End";
 
 		if (currentSceneName == "End") {
 			glutLeaveMainLoop();
 			break;
 
-		} 
+		}
+
+		if (currentSceneName != sceneReturn) {
+			currentSceneName = sceneReturn;
+		}
+
+		
 
 	}
 	
-	//delete tobii;
+	delete tobii;
 
 	
 	return 0;

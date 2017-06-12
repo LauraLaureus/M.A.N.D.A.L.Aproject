@@ -118,7 +118,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AudioMaster.cpp" />
     <ClCompile Include="GameComponent.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="GameScene.cpp" />

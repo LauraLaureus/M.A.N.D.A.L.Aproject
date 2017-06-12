@@ -29,9 +29,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AudioMaster.cpp">
-      <Filter>Components\Audio</Filter>
-    </ClCompile>
     <ClCompile Include="GameComponent.cpp">
       <Filter>DataStructures</Filter>
     </ClCompile>
